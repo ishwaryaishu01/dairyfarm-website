@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Products - Green Fields Dairy</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+
+  <header>
+    <h1>Our Dairy Products</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="index-te.html">తెలుగు</a>
+    </nav>
+  </header>
+
+<section class="products">
+  <h2>Our Dairy Products</h2>
+
+  <div class="product">
+    <h3>Fresh Cow Milk</h3>
+    <p>₹50 / Litre</p>
+    <p>Status: <span class="available">Available</span></p>
+  </div>
+
+  <div class="product">
+    <h3>Paneer</h3>
+    <p>₹200 / Kg</p>
+    <p>Status: <span class="unavailable">Out of Stock</span></p>
+  </div>
+
+  <div class="product">
+    <h3>Ghee</h3>
+    <p>₹500 / Kg</p>
+    <p>Status: <span class="available">Available</span></p>
+  </div>
+</section>
+<section class="order-form">
+  <h2>Order Enquiry</h2>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" required>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" required>
+
+    <label for="product">Product:</label>
+    <select id="product">
+      <option>Fresh Cow Milk</option>
+      <option>Paneer</option>
+      <option>Ghee</option>
+    </select>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" min="1" required>
+
+    <button type="submit">Submit Enquiry</button>
+  </form>
+</section>
+
+  <footer>
+    <p>© 2025 Chatrapathi shivaji dairy farm </p>
+  </footer>
+</body>
+</html>

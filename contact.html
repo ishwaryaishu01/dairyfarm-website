@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - Green Fields Dairy</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .rating {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+      font-size: 2rem;
+      display: inline-flex;
+      gap: 5px;
+      margin: 10px 0;
+    }
+    .rating > input {
+      display: none;
+    }
+    .rating > label {
+      color: #ccc;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .rating > input:checked ~ label,
+    .rating > input:hover ~ label,
+    .rating > label:hover,
+    .rating > label:hover ~ label {
+      color: gold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Contact Green Fields Dairy Farm</h1>
+    <nav>
+       <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="index-te.html">తెలుగు</a>
+    </nav>
+  </header>
+
+  <section class="contact-section">
+    <h2>We’d love to hear from you!</h2>
+
+    <div class="contact-info">
+      <p><strong>📍 Address:</strong> Chatrapathi Shivaji Dairy Farm, Palakonda, Manyam, Andhra Pradesh, India</p>
+      <p><strong>📞 Phone:</strong> +91 7799040484</p>
+      <p><strong>✉️ Email:</strong> contact@lokeshkarimi1997</p>
+    </div>
+
+    <form class="contact-form" onsubmit="handleSubmit(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <label>Rate Our Service:</label>
+      <div class="rating">
+        <input type="radio" name="rating" id="star5" value="5"><label for="star5">&#9733;</label>
+        <input type="radio" name="rating" id="star4" value="4"><label for="star4">&#9733;</label>
+        <input type="radio" name="rating" id="star3" value="3"><label for="star3">&#9733;</label>
+        <input type="radio" name="rating" id="star2" value="2"><label for="star2">&#9733;</label>
+        <input type="radio" name="rating" id="star1" value="1"><label for="star1">&#9733;</label>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Chatrapathi Shivaji Dairy Farm</p>
+  </footer>
+
+  <script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const message = document.getElementById("message").value;
+      const rating = document.querySelector('input[name="rating"]:checked')?.value || "No rating";
+
+      alert(`Thank you, ${name}!\nEmail: ${email}\nMessage: ${message}\nRating: ${rating} star(s)`);
+
+      // Here, you could also send data to a backend using fetch() if needed.
+    }
+  </script>
+</body>
+</html>
