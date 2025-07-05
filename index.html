@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Green Fields Dairy Farm</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>GREEN VALLEY DAIRY FARM</h1>
+    <nav>
+
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="contact-te.html">తెలుగు</a>
+    </nav>
+          <div class="auth-buttons">
+  <button onclick="showLogin()">Login</button>
+  <button onclick="showSignup()">Sign Up</button>
+</div>
+
+  </header>
+
+  <section class="hero">
+    <h2>Pure & Fresh Milk Delivered Daily</h2>
+    <p>From our farm to your table. 100% natural dairy products.</p>
+    <section class="home-photo">
+  <img id="farmImage" src="C:\Users\ISHWARYA\Downloads\milking process.jpg" alt="Dairy Farm" onclick="changeImage()" />
+</section>
+
+  <section class="home-photo">
+  <img src="C:\Users\ISHWARYA\Downloads\farm.jpg" alt="Welcome to Green Fields Dairy Farm" />
+  <script>
+  window.onload = function () {
+    alert("Welcome to Green Fields Dairy Farm! 🐄");
+  };
+</script>
+
+</section>
+
+  </section>
+<section class="testimonials">
+  <h2>What Our Customers Say</h2>
+  <blockquote>“Best milk ever! Tastes natural and pure.” – Suma, Vijayawada</blockquote>
+  <blockquote>“I love your ghee! Reminds me of home.” – Rajesh, Nellore</blockquote>
+</section>
+<section>
+  <p id="tip" style="text-align:center; font-style:italic;"></p>
+</section>
+
+<script>
+  const tips = [
+    "Drink milk early in the morning for best nutrition.",
+    "Use our ghee for healthy cooking.",
+    "Paneer is rich in protein—perfect for vegetarians!",
+  ];
+
+  document.getElementById("tip").innerText =
+    tips[Math.floor(Math.random() * tips.length)];
+</script>
+
+  <footer>
+    <p>© 2025 Chatrapathi shivaji dairy farm | Contact: 7799040484| Contact: 7337007975</p>
+  </footer>
+  <!-- ✅ JavaScript at bottom of index.html -->
+<script>
+  function changeImage() {
+    const img = document.getElementById("farmImage");
+    img.src = img.src.includes("C:\Users\ISHWARYA\Downloads\farm1.jpg") ? "C:\Users\ISHWARYA\Downloads\farm2.jpg" : "C:\Users\ISHWARYA\Downloads\farm view.jpeg";
+  }
+</script>
+<!-- Login Form -->
+<div id="loginForm" class="popup-form">
+  <h2>Login</h2>
+  <input type="text" placeholder="Username" />
+  <input type="password" placeholder="Password" />
+  <button>Login</button>
+  <button onclick="closeForms()">Close</button>
+</div>
+
+<!-- Sign Up Form -->
+<div id="signupForm" class="popup-form">
+  <h2>Sign Up</h2>
+  <input type="text" placeholder="Full Name" />
+  <input type="email" placeholder="Email" />
+  <input type="password" placeholder="Create Password" />
+  <button>Sign Up</button>
+  <button onclick="closeForms()">Close</button>
+</div>
+<script>
+  function showLogin() {
+    closeForms();
+    document.getElementById("loginForm").style.display = "block";
+  }
+
+  function showSignup() {
+    closeForms();
+    document.getElementById("signupForm").style.display = "block";
+  }
+
+  function closeForms() {
+    document.getElementById("loginForm").style.display = "none";
+    document.getElementById("signupForm").style.display = "none";
+  }
+</script>
+
+</body>
+</html>
